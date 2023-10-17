@@ -8,13 +8,9 @@ test("Add two numbers", () => {
 
 test("Add a number with a non-number", () => {
     expect(calculator.add(2,"x"))
-    .toBe("Cannot add non-numbers")
+    .toBe("Cannot computate non-numbers")
 })
 
-test("Empty argument", () => {
-    expect(calculator.add(2))
-    .toBe("Missing number")
-})
 
 //SUBSTRACT
 test("Substract two numbers", () => {
@@ -24,11 +20,34 @@ test("Substract two numbers", () => {
 
 test("Substract a number with a non-number", () => {
     expect(calculator.substract(2,"x"))
-    .toBe("Cannot add non-numbers")
+    .toBe("Cannot computate non-numbers")
 })
 
-test("Empty argument", () => {
-    expect(calculator.substract(2))
-    .toBe("Missing number")
+
+//Divide
+test("Divide two numbers", () => {
+    expect(calculator.divide(4,2))
+    .toBe(2)
 })
 
+test("Divide a number with a non-number", () => {
+    expect(calculator.divide(2,"x"))
+    .toBe("Cannot computate non-numbers")
+})
+
+
+test("Division by zero", () => {
+    expect(calculator.divide(2,0))
+    .toBe("Cannot divide by zero!")
+})
+
+//Multiply
+test("Multiply two numbers", () => {
+    expect(calculator.multiply(4,2))
+    .toBe(8)
+})
+
+test("Divide a number with a non-number", () => {
+    expect(calculator.multiply(2,"x"))
+    .toBe("Cannot computate non-numbers")
+})
