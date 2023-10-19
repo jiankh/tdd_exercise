@@ -28,7 +28,6 @@ const caesarCipher = (string, factor) => {
     })
 
     return newString
-
 }
 
 
